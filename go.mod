@@ -1,6 +1,8 @@
 module livroApi
 
-go 1.23
+go 1.21.0
+
+toolchain go1.23.4
 
 require (
 	github.com/bytedance/sonic v1.12.6 // indirect

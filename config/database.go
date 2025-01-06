@@ -10,7 +10,7 @@ import (
 var DB *gorm.DB
 
 func ConexaoDB() {
-	dsn := "host=localhost user=herick password=123321 dbname=livroapi port=5432 sslmode=disable TimeZone=America/Sao_Paulo"
+	dsn := "host=postgres dbname=livroapidb user=herick password=123321 port=5432 sslmode=disable TimeZone=America/Sao_Paulo"
 	var err error
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
