@@ -12,6 +12,7 @@ func SetupRouter() *gin.Engine {
 	{
 		api.POST("/livros", controllers.CreateLivro)
 		api.GET("/livros", controllers.GetLivros)
+		api.GET("/livros/:id", controllers.GetLivro)
 	}
 
 	return router

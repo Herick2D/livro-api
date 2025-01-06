@@ -23,3 +23,13 @@ func GetLivros(c *gin.Context) {
 	config.DB.Find(&livros)
 	c.JSON(http.StatusOK, livros)
 }
+
+func GetLivro(c *gin.Context) {
+	id := c.Param("id")
+	var livro models.Livro
+	if err := config.DB.First(&livro, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Livro não encontrado"})
+		return
+	}
+	c.JSON(http.StatusOK, livro)
+}
