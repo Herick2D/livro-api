@@ -33,3 +33,18 @@ func GetLivro(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, livro)
 }
+
+func UpdateLivro(c *gin.Context) {
+	id := c.Param("id")
+	var livro models.Livro
+	if err := config.DB.First(&livro, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Livro não encontrado"})
+		return
+	}
+	if err := c.ShouldBindJSON(&livro); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	config.DB.Save(&livro)
+	c.JSON(http.StatusOK, livro)
+}
