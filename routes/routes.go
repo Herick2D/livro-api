@@ -14,6 +14,7 @@ func SetupRouter() *gin.Engine {
 		api.GET("/livros", controllers.GetLivros)
 		api.GET("/livros/:id", controllers.GetLivro)
 		api.PUT("/livros/:id", controllers.UpdateLivro)
+		api.DELETE("/livros/:id", controllers.DeleteLivro)
 	}
 
 	return router

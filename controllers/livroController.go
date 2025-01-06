@@ -48,3 +48,12 @@ func UpdateLivro(c *gin.Context) {
 	config.DB.Save(&livro)
 	c.JSON(http.StatusOK, livro)
 }
+
+func DeleteLivro(c *gin.Context) {
+	id := c.Param("id")
+	if err := config.DB.Delete(&models.Livro{}, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Livro não encontrado"})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{"message": "Livro excluído com sucesso"})
+}
