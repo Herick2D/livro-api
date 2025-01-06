@@ -17,3 +17,9 @@ func CreateLivro(c *gin.Context) {
 	config.DB.Create(&livro)
 	c.JSON(http.StatusCreated, livro)
 }
+
+func GetLivros(c *gin.Context) {
+	var livros []models.Livro
+	config.DB.Find(&livros)
+	c.JSON(http.StatusOK, livros)
+}
