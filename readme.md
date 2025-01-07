@@ -68,15 +68,15 @@ A API oferece as seguintes funcionalidades:
 - **Descrição**: Deleta um livro existente.
 
 ### 5. Listar todos os livros
--  **URL**: `GET /livros`
+-  **URL**: `GET /api/livros`
 - **Descrição**: Retorna uma lista com todos os livros cadastrados.
 
 ## Executando a aplicação
 
+_Atenção: Garanta que você tenha o Docker instalado em sua máquina._
+
 - Acessando o [GitHub do projeto](https://github.com/Herick2D/livro-api.git), faça o clone do mesmo;
 - Acesse a pasta do projeto e execute o comando `docker-compose up --build` para criar a imagem do container e subir a aplicação;
-
-_Obs: Em casos de sistema operacional Windows garanta que você tenha o Docker desktop instalado em sua máquina._
 
 ## Observações
 
