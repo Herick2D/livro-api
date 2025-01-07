@@ -7,7 +7,7 @@ Este projeto apresenta uma API simples para o registro e manipulação de inform
 A API oferece as seguintes funcionalidades:
 
 ### 1. Criar um livro
--  **URL**: `POST /livros`
+-  **URL**: `POST /api/livros`
 - **Descrição**: Cria um novo livro.
 - **Requisição**:
     ```json
@@ -20,7 +20,7 @@ A API oferece as seguintes funcionalidades:
     ```
   
 ### 2. Buscar livro por ID
--  **URL**: `GET /livros/:id`
+-  **URL**: `GET /api/livros/:id`
 - **Descrição**: Retorna um livro específico.
 - **Resposta de sucesso:**:
     ```json
@@ -37,7 +37,7 @@ A API oferece as seguintes funcionalidades:
     ```
   
 ### 3. Atualizar um livro
--  **URL**: `PUT /livros/:id`
+-  **URL**: `PUT /api/livros/:id`
 - **Descrição**: Atualiza um livro existente.
 - **Requisição**:
     ```json
@@ -64,7 +64,7 @@ A API oferece as seguintes funcionalidades:
     ```
   
 ### 4. Deletar um livro
--  **URL**: `DELETE /livros/:id`
+-  **URL**: `DELETE /api/livros/:id`
 - **Descrição**: Deleta um livro existente.
 
 ### 5. Listar todos os livros
