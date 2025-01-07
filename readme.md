@@ -2,6 +2,9 @@
 
 Este projeto apresenta uma API simples para o registro e manipulação de informações de um livro. Desenvolvida em Go utilizando as tecnologias Gin, GORM, Docker e PostgreSQL. O objetivo da aplicação é realizar operações CRUD (Criar, Ler, Atualizar, Deletar) sobre dados de livros em um banco de dados.
 
+## Considerações
+Foram utilizados bibliotecas e frameworks por sua popularatidade e apoio da comunidade, decisão essa tomada para fins de manutenibilidade no desenvolvimento dessa aplicação. Optei por um banco de dados relacional devido à minha familiaridade com sua estrutura e ao vasto material de suporte disponível para o desenvolvimento de APIs que utilizam bancos relacionais e seus ORMs.
+
 ## Funcionalidades
 
 A API oferece as seguintes funcionalidades:
