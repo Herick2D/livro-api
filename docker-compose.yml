@@ -6,10 +6,10 @@ services:
     build: .
     container_name: livroapi_app
     environment:
-      - DB_HOST=postgres
-      - DB_USER=herick
-      - DB_PASSWORD=123321
-      - DB_NAME=livroapidb
+      - HOST=postgres
+      - USER=candidato
+      - PASSWORD=123456
+      - DBNAME=livroapidb
     ports:
       - "8080:8080"
     depends_on:
@@ -22,15 +22,15 @@ services:
     image: postgres:13-alpine
     container_name: livroapi_postgres
     environment:
-      - POSTGRES_USER=herick
-      - POSTGRES_PASSWORD=123321
+      - POSTGRES_USER=candidato
+      - POSTGRES_PASSWORD=123456
       - POSTGRES_DB=livroapidb
     ports:
       - "5432:5432"
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U herick -d livroapidb -h localhost"]
+      test: ["CMD-SHELL", "pg_isready -U candidato -d livroapidb -h localhost"]
       interval: 10s
       timeout: 5s
       retries: 5
