@@ -25,7 +25,7 @@ A API oferece as seguintes funcionalidades:
 ### 2. Buscar livro por ID
 -  **URL**: `GET /api/livros/:id`
 - **Descrição**: Retorna um livro específico.
-- **Resposta de sucesso:**:
+- **Resposta de sucesso**:
     ```json
     {
     "ID": 1,
