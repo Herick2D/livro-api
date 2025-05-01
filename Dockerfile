@@ -8,6 +8,8 @@ RUN go mod tidy
 
 COPY . .
 
+RUN go get github.com/gin-contrib/cors 
+
 RUN go build -o main .
 
 EXPOSE 8080
